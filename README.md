@@ -1,3 +1,3 @@
-This repository contains the source code for an upcoming ProgrammableWeb tutorial on the Yahoo! Weather API
+This repository wil contain the source code for an upcoming ProgrammableWeb tutorial on the Yahoo! Weather API
 
 
