@@ -1,6 +1,7 @@
 /* Sample function - not called */
 function getWeatherDemo() {
-    $.get('https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22London%2C%20uk%22)&format=json', function (data) {
+    $.get('https://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast ' +
+          'where woeid in (select woeid from geo.places(1) where text="London")&format=json', function (data) {
         console.log(data);
         alert("The temperatute in London is " +
             data.query.results.channel.item.condition.temp +
