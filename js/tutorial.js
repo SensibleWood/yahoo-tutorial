@@ -19,26 +19,10 @@ function getWeather() {
             bootbox.alert("Location not found: " + location + "!");
 
         } else {
-            var forecast = '<div class="col-lg-6"><h2>Outlook</h2></div>';
-
-            for (i=1; i < data.query.results.channel.item.forecast.length; i++) {
-                console.log(forecast);
-                forecast += addForecast(data.query.results.channel.item.forecast[i]);
-            }
-
             $('.jumbotron').html('<h2>' + data.query.results.channel.item.title + '</h2>' +
                 data.query.results.channel.item.description)
-            $('#forecast').html(forecast);
             $('.container').show();
         }
 
     });
-}
-
-function addForecast(forecast) {
-
-    return '<div class="col-lg-6">' +
-            '<h4>' + forecast.day + ' ' + forecast.date + '</h4>' +
-            '<p>' + forecast.text + ' with lows of ' + forecast.low + ' and highs of ' + forecast.high + '</p>' +
-        '</div>';
 }
